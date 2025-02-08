@@ -149,10 +149,16 @@
     <ClCompile Include="src\1.getting_started\1.2.hello_triangle\hello_triangle.cpp" />
     <ClCompile Include="src\1.getting_started\1.1.hello_window\hello_window.cpp" />
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\shaders\shader.cpp" />
     <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\shaders\shader.h" />
     <ClInclude Include="src\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shaders\gradient\gradient.frag" />
+    <None Include="src\shaders\gradient\gradient.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
