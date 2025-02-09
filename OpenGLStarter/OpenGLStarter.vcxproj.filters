@@ -39,6 +39,12 @@
     <ClCompile Include="src\1.getting_started\1.4.transformations\transforms_exercise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utils.h">
@@ -56,6 +62,8 @@
     <None Include="src\shaders\gradient\gradient.frag" />
     <None Include="src\shaders\texture_sampling\texturing.vert" />
     <None Include="src\shaders\texture_sampling\texturing.frag" />
+    <None Include="src\shaders\projections\projections.vert" />
+    <None Include="src\shaders\projections\texturing_only.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\textures\pixelart.PNG">

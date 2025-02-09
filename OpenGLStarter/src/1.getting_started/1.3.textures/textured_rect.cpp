@@ -10,7 +10,7 @@
 
 #include "../../stb/stb_image.h"
 
-int main()
+int textures_main()
 {
 
 	glfwInit();
