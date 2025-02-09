@@ -1,6 +1,9 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "../../utils.h"
 #include "../../shaders/shader.h"
@@ -12,7 +15,7 @@ int main()
 
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(800, 600, "Hello world triangle", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(800, 600, "Texture Sampling", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -46,7 +49,7 @@ int main()
 
 	// load and generate textures
 	int width, height, nrChannels;
-	unsigned char* data = stbi_load("src/textures/Installment I.jpg", &width, &height, &nrChannels, 0);
+	unsigned char* data = stbi_load("src/textures/face.png", &width, &height, &nrChannels, 0);
 
 	if (data)
 	{
@@ -69,10 +72,10 @@ int main()
 
 	stbi_set_flip_vertically_on_load(true);
 
-	data = stbi_load("src/textures/face.png", &width, &height, &nrChannels, 0);
+	data = stbi_load("src/textures/pixelart.png", &width, &height, &nrChannels, 0);
 	if (data)
-	{
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+	{															// use GL_RGBA here if there is transparency
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(GL_TEXTURE_2D);
 	}
 	else
@@ -120,7 +123,6 @@ int main()
 	glEnableVertexAttribArray(2);
 
 	Shader texShader("src/shaders/texture_sampling/texturing.vert", "src/shaders/texture_sampling/texturing.frag");
-
 	texShader.use();
 
 	texShader.setInt("tex1", 0);
@@ -135,6 +137,14 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		texShader.use();
+
+		// transformation tests
+		glm::mat4 trans = glm::mat4(1.0f);
+		trans = glm::translate(trans, glm::vec3(-0.5f, 0.5f, 0.0f));
+		trans = glm::rotate(trans, float(glfwGetTime()), glm::vec3(0.0, 0.0, 1.0));
+		
+		unsigned int transformLoc = glGetUniformLocation(texShader.ID, "transform");
+		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
 		// renderer
 		glActiveTexture(GL_TEXTURE0);
