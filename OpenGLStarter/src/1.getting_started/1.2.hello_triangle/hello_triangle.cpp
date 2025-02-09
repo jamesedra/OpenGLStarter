@@ -5,7 +5,7 @@
 #include "../../utils.h"
 #include "../../shaders/shader.h"
 
-int main() {
+int hello_triangle_main() {
 
 	glfwInit();
 
