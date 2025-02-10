@@ -57,6 +57,9 @@
     <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\basic_lighting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utils.h">

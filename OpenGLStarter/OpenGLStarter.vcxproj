@@ -154,6 +154,7 @@
     <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_3D.cpp" />
     <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_multiple.cpp" />
     <ClCompile Include="src\1.getting_started\1.6.camera\camera_tests.cpp" />
+    <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\basic_lighting.cpp" />
     <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp" />
     <ClCompile Include="src\camera.cpp" />
     <ClCompile Include="src\glad.c" />

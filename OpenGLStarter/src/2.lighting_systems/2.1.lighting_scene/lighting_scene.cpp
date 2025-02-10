@@ -13,9 +13,9 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+glm::vec3 l_Pos(1.2f, 1.0f, 2.0f);
 
-int main()
+int lighting_scene_main()
 {
 	// initializing window settings
 	glfwInit();
@@ -163,7 +163,7 @@ int main()
 		lightSourceShader.setMat4("view", view);
 
 		glm::mat4 model = glm::mat4(1.0f);
-		model = glm::translate(model, lightPos);
+		model = glm::translate(model, l_Pos);
 		model = glm::rotate(model, glm::radians((float)std::fmod(glfwGetTime() * 50, 360.0)), glm::vec3(0.0f, 1.0f, 0.0f));
 		lightSourceShader.setMat4("model", model);
 
