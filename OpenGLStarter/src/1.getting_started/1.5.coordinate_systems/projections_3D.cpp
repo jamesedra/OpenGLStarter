@@ -192,7 +192,5 @@ int projections_3D_main()
 		glfwSwapBuffers(window);
 	}
 
-
-
 	return 0;
 }

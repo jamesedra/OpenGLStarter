@@ -7,15 +7,18 @@
 
 #include "../../utils.h"
 #include "../../shaders/shader.h"
-
 #include "../../stb/stb_image.h"
+#include "../../camera.h"
+
+constexpr int W_WIDTH = 800;
+constexpr int W_HEIGHT = 600;
 
 int main()
 {
 	// initializing window settings
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(800, 600, "Camera Movements", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Camera Movements", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -32,7 +35,11 @@ int main()
 	}
 
 	glViewport(0, 0, 800, 600);
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	glfwSetCursorPosCallback(window, mouse_callback);
 	glEnable(GL_DEPTH_TEST);
+
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 	float vertices[] = {
 		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
@@ -165,6 +172,14 @@ int main()
 	texShader.setInt("tex1", 0);
 	texShader.setInt("tex2", 1);
 
+	Camera camera(
+		glm::vec3(0.0f, 0.0f, 3.0f),
+		glm::vec3(0.0f, 0.0f, -1.0f),
+		glm::vec3(0.0f, 1.0f, 0.0f)
+	);
+	glfwSetWindowUserPointer(window, &camera);
+
+
 	while (!glfwWindowShouldClose(window))
 	{
 		processInput(window);
@@ -186,19 +201,7 @@ int main()
 			model = glm::rotate(model, glm::radians(20.0f * i), glm::vec3(1.0f, 0.3f, 0.5f));
 
 			glm::mat4 view = glm::mat4(1.0f);
-			// view = glm::translate(view, glm::vec3(0.0f, 0.0f, -4.0f));
-			const float radius = 10.0f;
-			float camX = sin(glfwGetTime()) * radius;
-			float camZ = cos(glfwGetTime()) * radius;
-			view = glm::lookAt(glm::vec3(camX, 0.0f, camZ), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-
-			glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
-			glm::vec3 cameraTarget = glm::vec3(0.0f, 0.0f, 0.0f);
-			glm::vec3 cameraDirection = glm::normalize(cameraPos - cameraTarget);
-			glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
-			glm::vec3 cameraRight = glm::normalize(glm::cross(up, cameraDirection));
-			glm::vec3 cameraUp = glm::cross(cameraDirection, cameraRight);
-
+			view = glm::lookAt(camera.getCameraPos(), camera.getCameraPos() + camera.getCameraFront(), camera.getCameraUp());
 
 			glm::mat4 projection;
 			projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.f);
