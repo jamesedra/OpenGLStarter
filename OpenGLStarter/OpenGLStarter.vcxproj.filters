@@ -54,6 +54,9 @@
     <ClCompile Include="src\camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utils.h">
@@ -76,6 +79,9 @@
     <None Include="src\shaders\texture_sampling\texturing.frag" />
     <None Include="src\shaders\projections\projections.vert" />
     <None Include="src\shaders\projections\texturing_only.frag" />
+    <None Include="src\shaders\lighting\vertex.vert" />
+    <None Include="src\shaders\lighting\base.frag" />
+    <None Include="src\shaders\lighting\light_source.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\textures\pixelart.PNG">

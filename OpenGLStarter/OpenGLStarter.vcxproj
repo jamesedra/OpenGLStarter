@@ -154,6 +154,7 @@
     <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_3D.cpp" />
     <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_multiple.cpp" />
     <ClCompile Include="src\1.getting_started\1.6.camera\camera_tests.cpp" />
+    <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp" />
     <ClCompile Include="src\camera.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\shaders\shader.cpp" />
@@ -169,6 +170,9 @@
   <ItemGroup>
     <None Include="src\shaders\gradient\gradient.frag" />
     <None Include="src\shaders\gradient\gradient.vert" />
+    <None Include="src\shaders\lighting\base.frag" />
+    <None Include="src\shaders\lighting\light_source.frag" />
+    <None Include="src\shaders\lighting\vertex.vert" />
     <None Include="src\shaders\projections\projections.vert" />
     <None Include="src\shaders\projections\texturing_only.frag" />
     <None Include="src\shaders\texture_sampling\texturing.frag" />
