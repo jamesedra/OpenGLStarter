@@ -1,8 +1,8 @@
 #include "Camera.h"
 
 // Constructor implementation
-Camera::Camera(const glm::vec3& cameraPos, const glm::vec3& cameraFront, const glm::vec3& cameraUp)
-    : cameraPos(cameraPos), cameraFront(cameraFront), cameraUp(cameraUp)
+Camera::Camera(const glm::vec3& cameraPos, const glm::vec3& cameraFront, const glm::vec3& cameraUp, const float& fov)
+    : cameraPos(cameraPos), cameraFront(cameraFront), cameraUp(cameraUp), fov(fov)
 {
 }
 
@@ -22,6 +22,11 @@ void Camera::setCameraUp(const glm::vec3& up)
     cameraUp = up;
 }
 
+void Camera::setFOV(const float fov)
+{
+    this->fov = fov;
+}
+
 // Getter implementations
 glm::vec3 Camera::getCameraPos() const
 {
@@ -36,4 +41,9 @@ glm::vec3 Camera::getCameraFront() const
 glm::vec3 Camera::getCameraUp() const
 {
     return cameraUp;
+}
+
+float Camera::getFOV() const
+{
+    return fov;
 }

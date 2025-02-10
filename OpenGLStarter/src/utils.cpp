@@ -17,6 +17,7 @@ float lastX = 400;
 float lastY = 300;
 float pitch = 0.0f;
 float yaw = -90.0f;
+float zoom = 45.0f;
 
 
 void processInput(GLFWwindow* window)
@@ -89,6 +90,18 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 	direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
 
 	camera->setCameraFront(glm::normalize(direction));
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+	Camera* camera = static_cast<Camera*>(glfwGetWindowUserPointer(window));
+	if (!camera) return;
+
+	zoom -= (float)yoffset;
+	if (zoom < 1.0f) zoom = 1.0f;
+	if (zoom > 45.0f) zoom = 45.0f;
+
+	camera->setFOV(zoom);
 }
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)

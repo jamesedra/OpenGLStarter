@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,65 +70,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "camera.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\camera.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\camera.cpp",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\camera.cpp",
               "RelativeToolTip": "OpenGLStarter\\src\\camera.cpp",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAcwCYAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-10T00:49:28.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "camera.h",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\camera.h",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\camera.h",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\camera.h",
               "RelativeToolTip": "OpenGLStarter\\src\\camera.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-02-10T00:43:31.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "camera_tests.cpp",
-              "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
-              "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
-              "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
-              "RelativeToolTip": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-09T23:29:58.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "utils.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\utils.cpp",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.cpp",
               "RelativeToolTip": "OpenGLStarter\\src\\utils.cpp",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAABsAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-06T19:34:50.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "utils.h",
+              "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.h",
+              "RelativeDocumentMoniker": "OpenGLStarter\\src\\utils.h",
+              "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.h",
+              "RelativeToolTip": "OpenGLStarter\\src\\utils.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-06T19:34:38.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "camera_tests.cpp",
+              "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
+              "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
+              "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
+              "RelativeToolTip": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
+              "ViewState": "AQIAALcAAAAAAAAAAAAAAMwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-09T23:29:58.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "projections_3D.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp",
               "RelativeToolTip": "OpenGLStarter\\src\\1.getting_started\\1.5.coordinate_systems\\projections_3D.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAhwMEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-09T21:58:23.789Z",
               "EditorCaption": ""
@@ -170,19 +183,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-02-09T04:52:37.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "utils.h",
-              "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.h",
-              "RelativeDocumentMoniker": "OpenGLStarter\\src\\utils.h",
-              "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\utils.h",
-              "RelativeToolTip": "OpenGLStarter\\src\\utils.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-06T19:34:38.982Z",
               "EditorCaption": ""
             },
             {
