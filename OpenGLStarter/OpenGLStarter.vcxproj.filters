@@ -45,6 +45,12 @@
     <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_multiple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.6.camera\camera_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utils.h">

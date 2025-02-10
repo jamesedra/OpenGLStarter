@@ -1,2 +1,4 @@
-﻿  projections_3D.cpp
+﻿  camera_tests.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.6.camera\camera_tests.cpp(191,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.6.camera\camera_tests.cpp(192,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   OpenGLStarter.vcxproj -> C:\Users\james\source\repos\OpenGLStarter\bin\x64\Debug\OpenGLStarter.exe

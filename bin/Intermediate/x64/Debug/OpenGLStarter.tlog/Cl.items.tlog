@@ -4,6 +4,8 @@ C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.4.transformations\transforms_exercise.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\transforms_exercise.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.5.coordinate_systems\projections.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\projections.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.5.coordinate_systems\projections_3D.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\projections_3D.obj
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.5.coordinate_systems\projections_multiple.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\projections_multiple.obj
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.6.camera\camera_tests.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\camera_tests.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\glad.c;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\glad.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\shaders\shader.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\shader.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\stb\stb_image.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\stb_image.obj

@@ -10,7 +10,7 @@
 
 #include "../../stb/stb_image.h"
 
-int main()
+int projections_3D_main()
 {
 	// initializing window settings
 	glfwInit();
