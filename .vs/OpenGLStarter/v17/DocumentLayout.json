@@ -7,6 +7,9 @@
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\basic_lighting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\james\\Downloads\\basic_lighting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\lighting_scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\lighting_scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -42,11 +45,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "basic_lighting.cpp",
+              "DocumentMoniker": "C:\\Users\\james\\Downloads\\basic_lighting.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\basic_lighting.cpp",
+              "ToolTip": "C:\\Users\\james\\Downloads\\basic_lighting.cpp",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\basic_lighting.cpp",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAkwL8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-11T05:36:15.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,14 +72,14 @@
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\basic_lighting.cpp",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\basic_lighting.cpp",
               "RelativeToolTip": "OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\basic_lighting.cpp",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAkwJYAAAAfAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAkwH8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-10T05:00:02.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "light_source.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\lighting\\light_source.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\lighting\\light_source.frag",
@@ -71,12 +87,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\lighting\\light_source.frag",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-10T03:56:39.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:56:39.172Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "shader.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\shader.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\shader.cpp",
@@ -84,12 +99,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\shader.cpp",
               "ViewState": "AQIAAEsAAAAAAAAAAAAAAGkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-10T03:52:25.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:52:25.985Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "shader.h",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\shader.h",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\shader.h",
@@ -97,12 +111,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\shader.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-10T03:51:41.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:51:41.462Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "camera_tests.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
@@ -110,12 +123,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
               "ViewState": "AQIAAJYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-10T03:50:58.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:50:58.295Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "lighting_scene.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\lighting_scene.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\lighting_scene.cpp",
@@ -123,12 +135,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\2.lighting_systems\\2.1.lighting_scene\\lighting_scene.cpp",
               "ViewState": "AQIAAJAAAAAAAAAAAAAYwKEAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-10T03:37:25.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:37:25.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "base.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\lighting\\base.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\lighting\\base.frag",
@@ -136,12 +147,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\lighting\\base.frag",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-10T03:44:01.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:44:01.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "vertex.vert",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",
@@ -149,8 +159,7 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-10T03:35:11.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:35:11.613Z"
             }
           ]
         }

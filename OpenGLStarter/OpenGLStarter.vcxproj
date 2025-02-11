@@ -172,6 +172,7 @@
     <None Include="src\shaders\gradient\gradient.frag" />
     <None Include="src\shaders\gradient\gradient.vert" />
     <None Include="src\shaders\lighting\base.frag" />
+    <None Include="src\shaders\lighting\diffuse.frag" />
     <None Include="src\shaders\lighting\light_source.frag" />
     <None Include="src\shaders\lighting\vertex.vert" />
     <None Include="src\shaders\projections\projections.vert" />

@@ -85,6 +85,7 @@
     <None Include="src\shaders\lighting\vertex.vert" />
     <None Include="src\shaders\lighting\base.frag" />
     <None Include="src\shaders\lighting\light_source.frag" />
+    <None Include="src\shaders\lighting\diffuse.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\textures\pixelart.PNG">
