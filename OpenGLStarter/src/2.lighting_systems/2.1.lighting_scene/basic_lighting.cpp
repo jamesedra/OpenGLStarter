@@ -13,9 +13,9 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-glm::vec3 lightPos(1.5f, 0.0f, 1.0f);
+constexpr glm::vec3 lightPos(1.5f, 0.0f, 1.0f);
 
-int main()
+int basic_lighting_main()
 {
 	// initializing window settings
 	glfwInit();

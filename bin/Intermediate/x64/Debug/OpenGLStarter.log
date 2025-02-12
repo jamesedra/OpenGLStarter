@@ -11,6 +11,23 @@ C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.1.lighting_scene\basic_lighting.cpp(147,30): warning C4018: '<': signed/unsigned mismatch
   lighting_scene.cpp
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp(142,30): warning C4018: '<': signed/unsigned mismatch
+  materials_scene.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(147,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(169,22): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(170,22): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(171,22): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
   camera.cpp
   shader.cpp
   stb_image.cpp
