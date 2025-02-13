@@ -15,7 +15,7 @@ constexpr int W_HEIGHT = 600;
 
 constexpr glm::vec3 lightPos(1.5f, 0.0f, 1.0f);
 
-int main()
+int materials_scene_main()
 {
 	// initializing window settings
 	glfwInit();
