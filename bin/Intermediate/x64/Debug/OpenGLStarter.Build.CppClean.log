@@ -5,6 +5,8 @@ c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\stb_image.o
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\shader.obj
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\camera.obj
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\materials_scene.obj
+c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\light_casting.obj
+c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\diffuse_maps.obj
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\lighting_scene.obj
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\basic_lighting.obj
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\camera_tests.obj
@@ -16,7 +18,6 @@ c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\textured_re
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\hello_window.obj
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\hello_triangle.obj
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\glad.obj
-c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\diffuse_maps.obj
 c:\users\james\source\repos\openglstarter\bin\x64\debug\openglstarter.exe
 c:\users\james\source\repos\openglstarter\bin\x64\debug\openglstarter.pdb
 c:\users\james\source\repos\openglstarter\bin\intermediate\x64\debug\openglstarter.ilk

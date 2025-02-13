@@ -66,6 +66,9 @@
     <ClCompile Include="src\2.lighting_systems\2.2.materials\diffuse_maps.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.2.materials\light_casting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utils.h">
@@ -95,6 +98,7 @@
     <None Include="src\shaders\material_samples\material.frag" />
     <None Include="src\shaders\material_samples\diffuse_map.frag" />
     <None Include="src\shaders\material_samples\diff_spec_sampling.frag" />
+    <None Include="src\shaders\light_casting\light_casting.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\textures\pixelart.PNG">

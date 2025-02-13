@@ -9,6 +9,7 @@ C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.1.lighting_scene\basic_lighting.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\basic_lighting.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\lighting_scene.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\diffuse_maps.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\diffuse_maps.obj
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\light_casting.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\light_casting.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\materials_scene.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\camera.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\camera.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\glad.c;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\glad.obj

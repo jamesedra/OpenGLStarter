@@ -13,6 +13,7 @@ C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp(142,30): warning C4018: '<': signed/unsigned mismatch
   diffuse_maps.cpp
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\diffuse_maps.cpp(192,30): warning C4018: '<': signed/unsigned mismatch
+  light_casting.cpp
   materials_scene.cpp
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(147,30): warning C4018: '<': signed/unsigned mismatch
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(169,22): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
