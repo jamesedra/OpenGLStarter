@@ -178,6 +178,7 @@
     <None Include="src\shaders\lighting\light_source.frag" />
     <None Include="src\shaders\lighting\vertex.vert" />
     <None Include="src\shaders\material_samples\diffuse_map.frag" />
+    <None Include="src\shaders\material_samples\diff_spec_sampling.frag" />
     <None Include="src\shaders\material_samples\material.frag" />
     <None Include="src\shaders\projections\projections.vert" />
     <None Include="src\shaders\projections\texturing_only.frag" />
@@ -186,6 +187,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\textures\container2.png" />
+    <Image Include="src\textures\container2_specular.png" />
+    <Image Include="src\textures\container2_specular_colored.png" />
     <Image Include="src\textures\face.png" />
     <Image Include="src\textures\Installment I.jpg" />
     <Image Include="src\textures\pixelart.PNG" />

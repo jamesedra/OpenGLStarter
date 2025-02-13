@@ -94,6 +94,7 @@
     <None Include="src\shaders\lighting\diffuse.frag" />
     <None Include="src\shaders\material_samples\material.frag" />
     <None Include="src\shaders\material_samples\diffuse_map.frag" />
+    <None Include="src\shaders\material_samples\diff_spec_sampling.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\textures\pixelart.PNG">
@@ -106,6 +107,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="src\textures\container2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\container2_specular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\container2_specular_colored.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
