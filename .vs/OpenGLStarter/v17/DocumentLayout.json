@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -22,10 +26,6 @@
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\diffuse_maps.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\material_samples\\diff_spec_sampling.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\shaders\\material_samples\\diff_spec_sampling.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -36,10 +36,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\materials_scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\materials_scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.3.textures\\textured_rect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\1.getting_started\\1.3.textures\\textured_rect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\material_samples\\material.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -65,7 +61,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "transforms_exercise.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.4.transformations\\transforms_exercise.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.4.transformations\\transforms_exercise.cpp",
@@ -73,38 +69,37 @@
               "RelativeToolTip": "OpenGLStarter\\src\\1.getting_started\\1.4.transformations\\transforms_exercise.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-13T05:24:30.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T05:24:30.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "light_casting.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp",
               "RelativeToolTip": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp",
-              "ViewState": "AQIAAIoAAAAAAAAAAADwv8EAAABkAAAA",
+              "ViewState": "AQIAANgAAAAAAAAAAAAAAO0AAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-13T05:19:17.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "light_casting.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAfAAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAowGQAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-02-13T05:16:59.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "diffuse_maps.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\diffuse_maps.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\diffuse_maps.cpp",
@@ -112,8 +107,7 @@
               "RelativeToolTip": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\diffuse_maps.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-13T04:33:41.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T04:33:41.318Z"
             },
             {
               "$type": "Document",
@@ -125,8 +119,7 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\material_samples\\diff_spec_sampling.frag",
               "ViewState": "AQIAAAUAAAAAAAAAAAAQwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-13T04:57:46.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T04:57:46.806Z"
             },
             {
               "$type": "Document",
@@ -138,12 +131,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\material_samples\\diffuse_map.frag",
               "ViewState": "AQIAAAUAAAAAAAAAAAAQwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-13T04:37:06.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T04:37:06.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "material.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\material_samples\\material.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\material_samples\\material.frag",
@@ -151,8 +143,7 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\material_samples\\material.frag",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-13T04:36:08.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T04:36:08.835Z"
             },
             {
               "$type": "Document",
@@ -164,12 +155,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\materials_scene.cpp",
               "ViewState": "AQIAAJ8AAAAAAAAAAAAAALAAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T05:40:18.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T05:40:18.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "basic_lighting.cpp",
               "DocumentMoniker": "C:\\Users\\james\\Downloads\\basic_lighting.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\basic_lighting.cpp",
@@ -177,12 +167,11 @@
               "RelativeToolTip": "..\\..\\..\\Downloads\\basic_lighting.cpp",
               "ViewState": "AQIAAJ0AAAAAAAAAAAAkwL8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-11T05:36:15.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T05:36:15.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "camera_tests.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
@@ -190,12 +179,11 @@
               "RelativeToolTip": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
               "ViewState": "AQIAALoAAAAAAAAAAAAAAMoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-10T03:50:58.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:50:58.295Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "vertex.vert",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",
@@ -203,42 +191,7 @@
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-10T03:35:11.613Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "88db4f4c-01ac-45a8-bafd-92d14c775d92",
-        "Display": 0,
-        "X": 677,
-        "Y": 255,
-        "Width": 1373,
-        "Height": 683,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "textured_rect.cpp",
-              "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.3.textures\\textured_rect.cpp",
-              "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.3.textures\\textured_rect.cpp",
-              "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.3.textures\\textured_rect.cpp",
-              "RelativeToolTip": "OpenGLStarter\\src\\1.getting_started\\1.3.textures\\textured_rect.cpp",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAAAC8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-13T04:43:35.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T03:35:11.613Z"
             }
           ]
         }
