@@ -16,12 +16,12 @@ constexpr int W_HEIGHT = 600;
 // point light position
 constexpr glm::vec3 lightPos(0.5f, 0.0f, 0.5f);
 
-int main()
+int light_casting_main()
 {
 	// initializing window settings
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Lighting Maps", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Light Casting", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;

@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\multiple_lights.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\multiple_lights.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\multi_lights.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\shaders\\light_casting\\multi_lights.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|solutionrelative:OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36050F3E-56B7-47AB-8069-E701E7249B0F}|OpenGLStarter\\OpenGLStarter.vcxproj|C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.4.transformations\\transforms_exercise.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -53,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,7 +69,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "multiple_lights.cpp",
+              "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\multiple_lights.cpp",
+              "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\multiple_lights.cpp",
+              "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\multiple_lights.cpp",
+              "RelativeToolTip": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\multiple_lights.cpp",
+              "ViewState": "AQIAALUAAAAAAAAAAADwv7wAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-15T05:15:53.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "multi_lights.frag",
+              "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\multi_lights.frag",
+              "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\light_casting\\multi_lights.frag",
+              "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\multi_lights.frag",
+              "RelativeToolTip": "OpenGLStarter\\src\\shaders\\light_casting\\multi_lights.frag",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-15T05:14:56.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "transforms_exercise.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.4.transformations\\transforms_exercise.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.4.transformations\\transforms_exercise.cpp",
@@ -79,27 +113,27 @@
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp",
               "RelativeToolTip": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\light_casting.cpp",
-              "ViewState": "AQIAANgAAAAAAAAAAAAAAO0AAABLAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-13T05:19:17.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "light_casting.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
               "ToolTip": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
               "RelativeToolTip": "OpenGLStarter\\src\\shaders\\light_casting\\light_casting.frag",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAowGQAAABsAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAowGQAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-02-13T05:16:59.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "diffuse_maps.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\diffuse_maps.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\diffuse_maps.cpp",
@@ -111,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "diff_spec_sampling.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\material_samples\\diff_spec_sampling.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\material_samples\\diff_spec_sampling.frag",
@@ -123,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "diffuse_map.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\material_samples\\diffuse_map.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\material_samples\\diffuse_map.frag",
@@ -135,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "material.frag",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\material_samples\\material.frag",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\material_samples\\material.frag",
@@ -147,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "materials_scene.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\materials_scene.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\2.lighting_systems\\2.2.materials\\materials_scene.cpp",
@@ -159,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "basic_lighting.cpp",
               "DocumentMoniker": "C:\\Users\\james\\Downloads\\basic_lighting.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\basic_lighting.cpp",
@@ -171,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "camera_tests.cpp",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\1.getting_started\\1.6.camera\\camera_tests.cpp",
@@ -183,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "vertex.vert",
               "DocumentMoniker": "C:\\Users\\james\\source\\repos\\OpenGLStarter\\OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",
               "RelativeDocumentMoniker": "OpenGLStarter\\src\\shaders\\lighting\\vertex.vert",

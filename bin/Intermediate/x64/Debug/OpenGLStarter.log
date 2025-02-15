@@ -1,2 +1,48 @@
-﻿  light_casting.cpp
+﻿  hello_triangle.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\1.getting_started\1.2.hello_triangle\hello_triangle.cpp(67,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  hello_window.cpp
+  textured_rect.cpp
+  transforms_exercise.cpp
+  projections.cpp
+  projections_3D.cpp
+  projections_multiple.cpp
+  camera_tests.cpp
+  basic_lighting.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.1.lighting_scene\basic_lighting.cpp(147,30): warning C4018: '<': signed/unsigned mismatch
+  lighting_scene.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp(142,30): warning C4018: '<': signed/unsigned mismatch
+  diffuse_maps.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\diffuse_maps.cpp(192,30): warning C4018: '<': signed/unsigned mismatch
+  light_casting.cpp
+  materials_scene.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(147,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(169,22): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(170,22): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp(171,22): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  multiple_lights.cpp
+  camera.cpp
+  shader.cpp
+  stb_image.cpp
+  utils.cpp
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp(31,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp(67,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp(68,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp(72,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp(73,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp(74,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp(75,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  glad.c
   OpenGLStarter.vcxproj -> C:\Users\james\source\repos\OpenGLStarter\bin\x64\Debug\OpenGLStarter.exe
