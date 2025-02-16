@@ -33,3 +33,18 @@
 
 *.vsidx
 *.opendb
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+*.sln
+*.vcxproj*
+.vs/
+
+*~
+*.swp
+*.swo
+*.tmp
+
+*.log

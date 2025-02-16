@@ -12,8 +12,11 @@ C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\light_casting.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\light_casting.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\materials_scene.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\materials_scene.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\2.lighting_systems\2.2.materials\multiple_lights.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\multiple_lights.obj
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\3.model_loading\model_loading.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\model_loading.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\camera.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\camera.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\glad.c;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\glad.obj
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\Mesh.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\Mesh.obj
+C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\Model.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\Model.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\shaders\shader.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\shader.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\stb\stb_image.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\stb_image.obj
 C:\Users\james\source\repos\OpenGLStarter\OpenGLStarter\src\utils.cpp;C:\Users\james\source\repos\OpenGLStarter\bin\Intermediate\x64\Debug\utils.obj

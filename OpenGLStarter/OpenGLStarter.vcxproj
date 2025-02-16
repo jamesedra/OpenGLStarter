@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -126,7 +126,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc143-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -160,19 +160,25 @@
     <ClCompile Include="src\2.lighting_systems\2.2.materials\light_casting.cpp" />
     <ClCompile Include="src\2.lighting_systems\2.2.materials\materials_scene.cpp" />
     <ClCompile Include="src\2.lighting_systems\2.2.materials\multiple_lights.cpp" />
+    <ClCompile Include="src\3.model_loading\model_loading.cpp" />
     <ClCompile Include="src\camera.cpp" />
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\Mesh.cpp" />
+    <ClCompile Include="src\Model.cpp" />
     <ClCompile Include="src\shaders\shader.cpp" />
     <ClCompile Include="src\stb\stb_image.cpp" />
     <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\camera.h" />
+    <ClInclude Include="src\Mesh.h" />
+    <ClInclude Include="src\Model.h" />
     <ClInclude Include="src\shaders\shader.h" />
     <ClInclude Include="src\stb\stb_image.h" />
     <ClInclude Include="src\utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="src\resources\objects\backpack\backpack.mtl" />
     <None Include="src\shaders\gradient\gradient.frag" />
     <None Include="src\shaders\gradient\gradient.vert" />
     <None Include="src\shaders\lighting\base.frag" />
@@ -184,18 +190,32 @@
     <None Include="src\shaders\material_samples\diffuse_map.frag" />
     <None Include="src\shaders\material_samples\diff_spec_sampling.frag" />
     <None Include="src\shaders\material_samples\material.frag" />
+    <None Include="src\shaders\model_loading\base_material.frag" />
     <None Include="src\shaders\projections\projections.vert" />
     <None Include="src\shaders\projections\texturing_only.frag" />
     <None Include="src\shaders\texture_sampling\texturing.frag" />
     <None Include="src\shaders\texture_sampling\texturing.vert" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="src\resources\objects\backpack\ao.jpg" />
+    <Image Include="src\resources\objects\backpack\diffuse.jpg" />
+    <Image Include="src\resources\objects\backpack\normal.png" />
+    <Image Include="src\resources\objects\backpack\roughness.jpg" />
+    <Image Include="src\resources\objects\backpack\specular.jpg" />
     <Image Include="src\textures\container2.png" />
     <Image Include="src\textures\container2_specular.png" />
     <Image Include="src\textures\container2_specular_colored.png" />
     <Image Include="src\textures\face.png" />
     <Image Include="src\textures\Installment I.jpg" />
     <Image Include="src\textures\pixelart.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="src\resources\objects\backpack\backpack.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\resources\objects\backpack\source_attribution.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
