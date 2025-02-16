@@ -10,6 +10,7 @@
 #include "../shaders/shader.h"
 #include "../stb/stb_image.h"
 #include "../camera.h"
+#include <map>
 
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
@@ -122,6 +123,10 @@ int main()
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(2);
 
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	// glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ZERO);
+
 	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/shader_testing/blend_testing.frag");
 
 	shader.use();
@@ -138,17 +143,29 @@ int main()
 		glm::vec3 cameraPos = camera.getCameraPos();
 		view = glm::lookAt(cameraPos, cameraPos + camera.getCameraFront(), camera.getCameraUp());
 
+		// use a regular for loop for opaque objects. Always draw them first before transparent objects
+		// for (unsigned int i = 0; i < vegetation.size(); i++) {}
+
+		// sorting transparent objects
+		std::map<float, glm::vec3> sorted;
 		for (unsigned int i = 0; i < vegetation.size(); i++)
+		{
+			float distance = glm::length(cameraPos - vegetation[i]);
+			sorted[distance] = vegetation[i];
+		}
+
+		// draw transparent objects
+		for (std::map<float, glm::vec3>::reverse_iterator it = sorted.rbegin(); it != sorted.rend(); ++it)
 		{
 			shader.use();
 			shader.setMat4("projection", projection);
 			shader.setMat4("view", view);
 
 			glm::mat4 model = glm::mat4(1.0f);
-			model = glm::translate(model, vegetation[i]);
+			model = glm::translate(model, it->second);
 
 			shader.setMat4("model", model);
-			
+
 			glActiveTexture(GL_TEXTURE0);
 			glBindTexture(GL_TEXTURE_2D, texture0);
 			glBindVertexArray(vegetationVAO);
