@@ -104,7 +104,7 @@ int main()
 
 	// camera settings
 	Camera camera(
-		glm::vec3(0.0f, 0.0f, 3.0f),
+		glm::vec3(1.0f, 1.0f, 3.0f),
 		glm::vec3(0.0f, 0.0f, -1.0f),
 		glm::vec3(0.0f, 1.0f, 0.0f),
 		45.0f
@@ -176,7 +176,7 @@ int main()
 	glEnableVertexAttribArray(0);
 
 	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/lighting/diffuse.frag");
-	Shader frame("src/shaders/shader_testing/framebuffer_quad.vert", "src/shaders/shader_testing/framebuffer_quad.frag");
+	Shader frame("src/shaders/shader_testing/framebuffer_quad.vert", "src/shaders/post_processing/outlines.frag");
 
 	shader.use();
 	shader.setInt("texture1", 0);
@@ -189,14 +189,32 @@ int main()
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glEnable(GL_DEPTH_TEST);
+
 		// draw scene (included in first pass)
 		glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), 800.0f / 600.0f, 0.1f, 100.f);
 		glm::mat4 view = glm::mat4(1.0f);
 		glm::vec3 cameraPos = camera.getCameraPos();
 		view = glm::lookAt(cameraPos, cameraPos + camera.getCameraFront(), camera.getCameraUp());
 
+		// floor
 		shader.use();
 		glm::mat4 model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, -0.5f, 0.0f));
+		model = glm::rotate(model, glm::radians(-90.f), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
+		shader.setMat4("projection", projection);
+		shader.setMat4("view", view);
+		shader.setMat4("model", model);
+		shader.setVec3("objectColor", 0.2f, 1.0f, 0.31f);
+		shader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+		shader.setVec3("viewPos", cameraPos.x, cameraPos.y, cameraPos.z);
+		shader.setVec3("lightPos", glm::vec3(2.0, 2.0, 2.0));
+		glBindVertexArray(quadVAO);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+
+		// cube
+		shader.use();
+		model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		shader.setMat4("projection", projection);
 		shader.setMat4("view", view);
@@ -214,6 +232,7 @@ int main()
 		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		frame.use();
+		frame.setInt("screenTexture", 0);
 		glBindVertexArray(quadVAO);
 		glDisable(GL_DEPTH_TEST);
 		glBindTexture(GL_TEXTURE_2D, texColorBuffer);
