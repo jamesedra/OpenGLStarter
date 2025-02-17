@@ -15,11 +15,11 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int framebuffer_test_main()
+int main()
 {
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Frame Buffer", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Cube Maps", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -176,7 +176,38 @@ int framebuffer_test_main()
 	glEnableVertexAttribArray(0);
 
 	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/lighting/diffuse.frag");
-	Shader frame("src/shaders/shader_testing/framebuffer_quad.vert", "src/shaders/post_processing/outlines.frag");
+	Shader frame("src/shaders/shader_testing/framebuffer_quad.vert", "src/shaders/shader_testing/framebuffer_quad.frag");
+	Shader skybox("src/shaders/cubemapping/cubemap.vert", "src/shaders/cubemapping/cubemap.frag");
+
+	// cubemap object
+	stbi_set_flip_vertically_on_load(false);
+	unsigned int textureID;
+	glGenTextures(1, &textureID);
+	glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
+
+	unsigned int skyboxVAO;
+	glGenVertexArrays(1, &skyboxVAO);
+
+	unsigned int skyVBO;
+	glGenBuffers(1, &skyVBO);
+	glBindBuffer(GL_ARRAY_BUFFER, skyVBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	glBindVertexArray(skyboxVAO);
+
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+
+	std::vector<std::string> faces = {
+		"src/resources/skybox/right.jpg",
+		"src/resources/skybox/left.jpg",
+		"src/resources/skybox/top.jpg",
+		"src/resources/skybox/bottom.jpg",
+		"src/resources/skybox/front.jpg",
+		"src/resources/skybox/back.jpg"
+	};
+
+	unsigned int cubemapTexture = loadCubemap(faces);
+	stbi_set_flip_vertically_on_load(true);
 
 	shader.use();
 	shader.setInt("texture1", 0);
@@ -196,25 +227,22 @@ int framebuffer_test_main()
 		glm::vec3 cameraPos = camera.getCameraPos();
 		view = glm::lookAt(cameraPos, cameraPos + camera.getCameraFront(), camera.getCameraUp());
 
-		// floor
-		shader.use();
-		glm::mat4 model = glm::mat4(1.0f);
-		model = glm::translate(model, glm::vec3(0.0f, -0.5f, 0.0f));
-		model = glm::rotate(model, glm::radians(-90.f), glm::vec3(1.0f, 0.0f, 0.0f));
-		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
-		shader.setMat4("projection", projection);
-		shader.setMat4("view", view);
-		shader.setMat4("model", model);
-		shader.setVec3("objectColor", 0.2f, 1.0f, 0.31f);
-		shader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-		shader.setVec3("viewPos", cameraPos.x, cameraPos.y, cameraPos.z);
-		shader.setVec3("lightPos", glm::vec3(2.0, 2.0, 2.0));
-		glBindVertexArray(quadVAO);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		// draw cubemap
+		glFrontFace(GL_CW);
+		glDepthMask(GL_FALSE); // disabe depth writes
+		skybox.use();
+		skybox.setMat4("projection", projection);
+		skybox.setMat4("view", glm::mat4(glm::mat3(view)));
+		skybox.setInt("skybox", 0);
+		glBindVertexArray(skyboxVAO);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		glDepthMask(GL_TRUE);
+		glFrontFace(GL_CCW);
 
 		// cube
 		shader.use();
-		model = glm::mat4(1.0f);
+		glm::mat4 model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		shader.setMat4("projection", projection);
 		shader.setMat4("view", view);
