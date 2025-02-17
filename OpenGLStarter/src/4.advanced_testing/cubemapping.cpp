@@ -227,19 +227,6 @@ int main()
 		glm::vec3 cameraPos = camera.getCameraPos();
 		view = glm::lookAt(cameraPos, cameraPos + camera.getCameraFront(), camera.getCameraUp());
 
-		// draw cubemap
-		glFrontFace(GL_CW);
-		glDepthMask(GL_FALSE); // disabe depth writes
-		skybox.use();
-		skybox.setMat4("projection", projection);
-		skybox.setMat4("view", glm::mat4(glm::mat3(view)));
-		skybox.setInt("skybox", 0);
-		glBindVertexArray(skyboxVAO);
-		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
-		glDepthMask(GL_TRUE);
-		glFrontFace(GL_CCW);
-
 		// cube
 		shader.use();
 		glm::mat4 model = glm::mat4(1.0f);
@@ -254,6 +241,21 @@ int main()
 
 		glBindVertexArray(cubeVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		// draw cubemap
+		glFrontFace(GL_CW);
+		//  glDepthMask(GL_FALSE); // disable depth writes
+		glDepthFunc(GL_LEQUAL);
+		skybox.use();
+		skybox.setMat4("projection", projection);
+		skybox.setMat4("view", glm::mat4(glm::mat3(view)));
+		skybox.setInt("skybox", 0);
+		glBindVertexArray(skyboxVAO);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		// glDepthMask(GL_TRUE);
+		glDepthFunc(GL_LESS);
+		glFrontFace(GL_CCW);
 
 		// second pass
 		glBindFramebuffer(GL_FRAMEBUFFER, 0); // set frame buffer to default again
