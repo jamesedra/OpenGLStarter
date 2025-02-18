@@ -185,7 +185,7 @@ int main()
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(5 * sizeof(float)));
 	glEnableVertexAttribArray(1);
 
-	Shader shader("src/shaders/cubemapping/reflection.vert", "src/shaders/cubemapping/reflection.frag");
+	Shader shader("src/shaders/cubemapping/reflection.vert", "src/shaders/cubemapping/refraction.frag");
 	Shader frame("src/shaders/shader_testing/framebuffer_quad.vert", "src/shaders/shader_testing/framebuffer_quad.frag");
 	Shader skybox("src/shaders/cubemapping/cubemap.vert", "src/shaders/cubemapping/cubemap.frag");
 
