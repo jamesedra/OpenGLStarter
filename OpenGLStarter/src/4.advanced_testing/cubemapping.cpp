@@ -203,6 +203,8 @@ int main()
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
+	glEnable(GL_PROGRAM_POINT_SIZE);
+
 	std::vector<std::string> faces = {
 		"src/resources/skybox/right.jpg",
 		"src/resources/skybox/left.jpg",
@@ -244,7 +246,7 @@ int main()
 		shader.setInt("skybox", 0); // gets the first texture unit cubemap
 		glBindVertexArray(cubeVAO);
 		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture); // can be disregarded is the cubemap was never unbounded
-		glDrawArrays(GL_TRIANGLES, 0, 36);
+		glDrawArrays(GL_POINTS, 0, 36);
 
 		// draw cubemap
 		glFrontFace(GL_CW); // flip face culling since the camera is inside the cubemap
