@@ -18,8 +18,11 @@ public:
 	// program ID
 	unsigned int ID;
 
-	// constructor. Paths should start at root directory.
+	// vert and frag shader constructor. Paths should start at root directory.
 	Shader(const char* vertexPath, const char* fragmentPath);
+
+	// vert, geom, and frag shader constructor
+	Shader(const char* vertexPath, const char* geometryPath, const char* fragmentPath);
 
 	// use and activate the shader
 	void use();

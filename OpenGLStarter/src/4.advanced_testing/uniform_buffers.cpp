@@ -15,7 +15,7 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int main()
+int uniform_buffers_main()
 {
 	glfwInit();
 
@@ -131,7 +131,7 @@ int main()
 	unsigned int yellow = glGetUniformBlockIndex(yellowShader.ID, "Matrices");
 	glUniformBlockBinding(yellowShader.ID, yellow, 0);
 	unsigned int blue = glGetUniformBlockIndex(blueShader.ID, "Matrices");
-	glUniformBlockBinding(blueShader.ID, yellow, 0);
+	glUniformBlockBinding(blueShader.ID, blue, 0);
 
 	// allocate uniform buffer
 	unsigned int uboMatrices;
