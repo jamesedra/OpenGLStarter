@@ -1,5 +1,4 @@
 #include <iostream>
-#include <map>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -15,11 +14,12 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int geom_shading_main()
+int main()
 {
+	// initializing window settings
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Geometry Shading", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Geometry Explosion", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -38,15 +38,15 @@ int geom_shading_main()
 	glViewport(0, 0, 800, 600);
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	glfwSetCursorPosCallback(window, mouse_callback);
 	glfwSetScrollCallback(window, scroll_callback);
+
 	stbi_set_flip_vertically_on_load(true);
 
 	// camera settings
 	Camera camera(
-		glm::vec3(1.0f, 1.0f, 3.0f),
+		glm::vec3(0.0f, 0.0f, 10.0f),
 		glm::vec3(0.0f, 0.0f, -1.0f),
 		glm::vec3(0.0f, 1.0f, 0.0f),
 		45.0f
@@ -54,46 +54,33 @@ int geom_shading_main()
 
 	glfwSetWindowUserPointer(window, &camera);
 
-	float points[] = {
-		-0.5f, 0.5f, 1.0f, 0.0f, 0.0f,
-		 0.5f, 0.5f, 0.0f, 1.0f, 0.0f,
-		 0.5f,-0.5f, 0.0f, 0.0f, 1.0f,
-		-0.5f,-0.5f, 1.0f, 1.0f, 0.0f
-	};
+	Shader shader("src/shaders/geometry_shaders/model_vert.vert", "src/shaders/geometry_shaders/explode.geom", "src/shaders/model_loading/base_material.frag");
 
-	// cube object
-	unsigned int VAO;
-	glGenVertexArrays(1, &VAO);
-
-	unsigned int VBO;
-	glGenBuffers(1, &VBO);
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(points), points, GL_STATIC_DRAW);
-	glBindVertexArray(VAO);
-
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*) (2 * sizeof(float)));
-	glEnableVertexAttribArray(1);
-
-	Shader shader("src/shaders/geometry_shaders/vertex.vert", "src/shaders/geometry_shaders/house.geom", "src/shaders/geometry_shaders/geom_color.frag");
-
-	glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), (float)W_WIDTH / (float)W_HEIGHT, 0.1f, 100.f);
+	Model object("src/resources/objects/backpack/backpack.obj");
 
 	while (!glfwWindowShouldClose(window))
 	{
 		processInput(window);
+
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+		shader.use();
+
+		glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), 800.0f / 600.0f, 0.1f, 100.f);
 		glm::mat4 view = glm::mat4(1.0f);
 		glm::vec3 cameraPos = camera.getCameraPos();
 		view = glm::lookAt(cameraPos, cameraPos + camera.getCameraFront(), camera.getCameraUp());
+		shader.setMat4("projection", projection);
+		shader.setMat4("view", view);
+		shader.setFloat("time", glfwGetTime());
 
-		shader.use();
-		glBindVertexArray(VAO);
-		glDrawArrays(GL_POINTS, 0, 4);
+		glm::mat4 model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+		shader.setMat4("model", model);
+
+		object.Draw(shader);
 
 		// buffer swapping and event polling
 		glfwPollEvents();
