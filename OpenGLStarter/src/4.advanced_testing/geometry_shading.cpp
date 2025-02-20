@@ -55,10 +55,10 @@ int main()
 	glfwSetWindowUserPointer(window, &camera);
 
 	float points[] = {
-		-0.5f, 0.5f, 
-		 0.5f, 0.5f, 
-		 0.5f,-0.5f,
-		-0.5f,-0.5f
+		-0.5f, 0.5f, 1.0f, 0.0f, 0.0f,
+		 0.5f, 0.5f, 0.0f, 1.0f, 0.0f,
+		 0.5f,-0.5f, 0.0f, 0.0f, 1.0f,
+		-0.5f,-0.5f, 1.0f, 1.0f, 0.0f
 	};
 
 	// cube object
@@ -71,10 +71,13 @@ int main()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(points), points, GL_STATIC_DRAW);
 	glBindVertexArray(VAO);
 
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
-	Shader shader("src/shaders/geometry_shaders/vertex.vert", "src/shaders/geometry_shaders/line.geom", "src/shaders/geometry_shaders/line.frag");
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*) (2 * sizeof(float)));
+	glEnableVertexAttribArray(1);
+
+	Shader shader("src/shaders/geometry_shaders/vertex.vert", "src/shaders/geometry_shaders/house.geom", "src/shaders/geometry_shaders/geom_color.frag");
 
 	glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), (float)W_WIDTH / (float)W_HEIGHT, 0.1f, 100.f);
 
