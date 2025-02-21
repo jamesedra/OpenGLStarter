@@ -14,6 +14,7 @@ public:
 		loadModel(path);
 	}
 	void Draw(Shader& shader);
+	void DrawInstanced(Shader& shader, unsigned int count);
 private:
 	std::vector<Mesh> meshes;
 	std::vector<Texture> textures_loaded;

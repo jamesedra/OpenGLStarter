@@ -7,6 +7,12 @@ void Model::Draw(Shader& shader)
 		meshes[i].Draw(shader);
 }
 
+void Model::DrawInstanced(Shader& shader, unsigned int count)
+{
+	for (unsigned int i = 0; i < meshes.size(); i++)
+		meshes[i].DrawInstanced(shader, count);
+}
+
 void Model::loadModel(std::string path)
 {
 	Assimp::Importer import;

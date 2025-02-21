@@ -14,12 +14,12 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int norm_visualization_main()
+int main()
 {
 	// initializing window settings
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Visualizing Normal Vectors", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Instancing", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -53,12 +53,32 @@ int norm_visualization_main()
 	);
 
 	glfwSetWindowUserPointer(window, &camera);
-	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/model_loading/base_material.frag");
-	Shader normalsShader("src/shaders/geometry_shaders/visual_normal.vert", "src/shaders/geometry_shaders/visual_normal.geom", "src/shaders/shader_testing/blue.frag");
+	Shader shader("src/shaders/instancing/instancing.vert", "src/shaders/model_loading/base_material.frag");
 
 	Model object("src/resources/objects/backpack/backpack.obj");
 
 	glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), 800.0f / 600.0f, 0.1f, 100.f);
+
+	// set up instancing offset values
+	glm::vec2 translations[100];
+	int index = 0;
+	float offset = 0.5f;
+	for (int y = -10; y < 10; y += 2)
+	{
+		for (int x = -10; x < 10; x += 2)
+		{
+			glm::vec2 translation;
+			translation.x = (float)x / 0.5f + offset;
+			translation.y = (float)y / 0.5f + offset;
+			translations[index++] = translation;
+		}
+	}
+
+	shader.use();
+	for (unsigned int i = 0; i < 100; i++)
+	{
+		shader.setVec2(("offsets[" + std::to_string(i) + "]"), translations[i]);
+	}
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -79,14 +99,7 @@ int norm_visualization_main()
 		shader.setMat4("view", view);
 		shader.setMat4("model", model);
 
-		object.Draw(shader);
-
-		normalsShader.use();
-		normalsShader.setMat4("projection", projection);
-		normalsShader.setMat4("view", view);
-		normalsShader.setMat4("model", model);
-
-		object.Draw(normalsShader);
+		object.DrawInstanced(shader, 100);
 
 		// buffer swapping and event polling
 		glfwPollEvents();
