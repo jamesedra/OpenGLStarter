@@ -14,12 +14,12 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int geom_explosion_main()
+int main()
 {
 	// initializing window settings
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Geometry Explosion", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Visualizing Normal Vectors", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -53,10 +53,12 @@ int geom_explosion_main()
 	);
 
 	glfwSetWindowUserPointer(window, &camera);
-
-	Shader shader("src/shaders/geometry_shaders/model_vert.vert", "src/shaders/geometry_shaders/explode.geom", "src/shaders/model_loading/base_material.frag");
+	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/model_loading/base_material.frag");
+	Shader normalsShader("src/shaders/geometry_shaders/visual_normal.vert", "src/shaders/geometry_shaders/visual_normal.geom", "src/shaders/shader_testing/blue.frag");
 
 	Model object("src/resources/objects/backpack/backpack.obj");
+
+	glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), 800.0f / 600.0f, 0.1f, 100.f);
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -65,22 +67,26 @@ int geom_explosion_main()
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		shader.use();
-
-		glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), 800.0f / 600.0f, 0.1f, 100.f);
 		glm::mat4 view = glm::mat4(1.0f);
 		glm::vec3 cameraPos = camera.getCameraPos();
 		view = glm::lookAt(cameraPos, cameraPos + camera.getCameraFront(), camera.getCameraUp());
-		shader.setMat4("projection", projection);
-		shader.setMat4("view", view);
-		shader.setFloat("time", glfwGetTime());
-
 		glm::mat4 model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+
+		shader.use();
+		shader.setMat4("projection", projection);
+		shader.setMat4("view", view);
 		shader.setMat4("model", model);
 
 		object.Draw(shader);
+
+		normalsShader.use();
+		normalsShader.setMat4("projection", projection);
+		normalsShader.setMat4("view", view);
+		normalsShader.setMat4("model", model);
+
+		object.Draw(normalsShader);
 
 		// buffer swapping and event polling
 		glfwPollEvents();
