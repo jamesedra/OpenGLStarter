@@ -14,7 +14,7 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int main()
+int inst_arrays_main()
 {
 	// initializing window settings
 	glfwInit();
