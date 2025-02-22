@@ -30,6 +30,9 @@ public:
 	Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures);
 	void Draw(Shader& shader);
 	void DrawInstanced(Shader& shader, unsigned int count);
+
+	const std::vector<unsigned int>& getIndices() const { return indices; }
+	unsigned int getVAO() const { return VAO; }
 private:
 	unsigned int VAO, VBO, EBO;
 	void setupMesh();

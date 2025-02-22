@@ -33,7 +33,7 @@ void processInput(GLFWwindow* window)
 	lastFrame = currentFrame;
 
 
-	const float cameraSpeed = 2.5f * deltaTime; // Adjust as needed.
+	const float cameraSpeed = 12.5f * deltaTime; // Adjust as needed.
 
 	// Update camera position based on key input:
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
@@ -100,7 +100,7 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 	zoom -= (float)yoffset;
 	if (zoom < 1.0f) zoom = 1.0f;
 	if (zoom > 45.0f) zoom = 45.0f;
-
+	
 	camera->setFOV(zoom);
 }
 

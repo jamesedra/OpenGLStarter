@@ -148,3 +148,8 @@ unsigned int Model::TextureFromFile(const char* path, const std::string& directo
 	stbi_image_free(data);
 	return textureID;
 }
+
+const std::vector<Mesh>& Model::getMeshes() const
+{
+	return meshes;
+}

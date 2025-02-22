@@ -15,6 +15,8 @@ public:
 	}
 	void Draw(Shader& shader);
 	void DrawInstanced(Shader& shader, unsigned int count);
+
+	const std::vector<Mesh>& getMeshes() const; // may be temporary for getting mesh array
 private:
 	std::vector<Mesh> meshes;
 	std::vector<Texture> textures_loaded;

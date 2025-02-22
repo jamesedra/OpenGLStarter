@@ -14,12 +14,12 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int asteroid_belt_non_inst_main()
+int main()
 {
 	// initializing window settings
 	glfwInit();
 
-	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Asteroid Belt (non-instanced)", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Asteroid Belt (instanced)", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -46,25 +46,25 @@ int asteroid_belt_non_inst_main()
 
 	// camera settings
 	Camera camera(
-		glm::vec3(0.0f, 0.0f, 10.0f),
+		glm::vec3(0.0f, 50.0f, 200.0f),
 		glm::vec3(0.0f, 0.0f, -1.0f),
 		glm::vec3(0.0f, 1.0f, 0.0f),
 		45.0f
 	);
 
-	unsigned int amount = 2000;
+	unsigned int amount = 20000;
 	glm::mat4* modelMatrices;
 	modelMatrices = new glm::mat4[amount];
 	srand(glfwGetTime());
-	float radius = 50.0;
-	float offset = 2.5f;
-	
+	float radius = 150.0f;
+	float offset = 25.0f;
+
 
 	for (unsigned int i = 0; i < amount; i++)
 	{
 		glm::mat4 model = glm::mat4(1.0f);
 
-		float angle = (float) i / (float) amount * 360.0f;
+		float angle = glm::radians((float)i / (float)amount * 360.0f);
 		float displacement = (rand() % (int)(2 * offset * 100)) / 100.f - offset;
 
 		float x = sin(angle) * radius + displacement;
@@ -84,15 +84,45 @@ int asteroid_belt_non_inst_main()
 		modelMatrices[i] = model;
 	}
 
-	glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), 800.0f / 600.0f, 0.1f, 100.f);
-
-	
-	glfwSetWindowUserPointer(window, &camera);
-
-	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/model_loading/base_material.frag");
 
 	Model planet("src/resources/objects/planet/planet.obj");
 	Model rock("src/resources/objects/rock/rock.obj");
+
+	unsigned int buffer;
+	glGenBuffers(1, &buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, buffer);
+	glBufferData(GL_ARRAY_BUFFER, amount * sizeof(glm::mat4), &modelMatrices[0], GL_STATIC_DRAW);
+
+	const std::vector<Mesh>& rockMeshes = rock.getMeshes();
+
+	for (unsigned int i = 0; i < rockMeshes.size(); i++)
+	{
+		unsigned int VAO = rockMeshes[i].getVAO();
+		glBindVertexArray(VAO);
+		glBindBuffer(GL_ARRAY_BUFFER, buffer);
+
+		std::size_t v4s = sizeof(glm::vec4);
+		glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, 4 * v4s, (void*)0);
+		glEnableVertexAttribArray(3);
+		glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, 4 * v4s, (void*)(1 * v4s));
+		glEnableVertexAttribArray(4);
+		glVertexAttribPointer(5, 4, GL_FLOAT, GL_FALSE, 4 * v4s, (void*)(2 * v4s));
+		glEnableVertexAttribArray(5);
+		glVertexAttribPointer(6, 4, GL_FLOAT, GL_FALSE, 4 * v4s, (void*)(3 * v4s));
+		glEnableVertexAttribArray(6);
+
+		glVertexAttribDivisor(3, 1);
+		glVertexAttribDivisor(4, 1);
+		glVertexAttribDivisor(5, 1);
+		glVertexAttribDivisor(6, 1);
+
+		glBindVertexArray(0);
+	}
+
+	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/model_loading/base_material.frag");
+	Shader rockShader("src/shaders/instancing/asteroid_instancing.vert", "src/shaders/model_loading/base_material.frag");
+
+	glfwSetWindowUserPointer(window, &camera);
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -100,27 +130,27 @@ int asteroid_belt_non_inst_main()
 
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+		glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()), 800.0f / 600.0f, 0.1f, 1000.f);
 		glm::mat4 view = glm::mat4(1.0f);
 		glm::vec3 cameraPos = camera.getCameraPos();
 		view = glm::lookAt(cameraPos, cameraPos + camera.getCameraFront(), camera.getCameraUp());
-		
+
 		// planet
 		shader.use();
 		glm::mat4 model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
-		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(10.0f, 10.0f, 10.0f));
 		shader.setMat4("projection", projection);
 		shader.setMat4("view", view);
 		shader.setMat4("model", model);
 		planet.Draw(shader);
 
-		for (unsigned int i = 0; i < amount; i++)
-		{
-			shader.setMat4("model", modelMatrices[i]);
-			rock.Draw(shader);
-		}
-
+		// rocks
+		rockShader.use();
+		rockShader.setMat4("projection", projection);
+		rockShader.setMat4("view", view);
+		rock.DrawInstanced(rockShader, amount);
+		
 		// buffer swapping and event polling
 		glfwPollEvents();
 		glfwSwapBuffers(window);
