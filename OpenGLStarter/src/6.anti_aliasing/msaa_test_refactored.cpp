@@ -10,17 +10,18 @@
 #include "../shaders/shader.h"
 #include "../stb/stb_image.h"
 #include "../camera.h"
+#include "../Framebuffer.h"
 
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int msaa_main()
+int main()
 {
 	// initializing window settings
 	glfwInit();
 
-	// glfwWindowHint(GLFW_SAMPLES, 4);
-	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Asteroid Belt (MSAA)", NULL, NULL);
+	// glfwWindowHint(GLFW_SAMPLES, 4); // only use when we aren't using framebuffers for msaa
+	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Asteroid Belt (MSAA, refactored)", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -43,7 +44,7 @@ int msaa_main()
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	glfwSetCursorPosCallback(window, mouse_callback);
 	glfwSetScrollCallback(window, scroll_callback);
-	
+
 	stbi_set_flip_vertically_on_load(true);
 
 	// camera settings
@@ -55,95 +56,11 @@ int msaa_main()
 	);
 	glfwSetWindowUserPointer(window, &camera);
 
-	// frame buffer init
-	unsigned int msFramebuffer;
-	glGenFramebuffers(1, &msFramebuffer);
-	glBindFramebuffer(GL_FRAMEBUFFER, msFramebuffer);
+	// frame buffers. third parameter creates a multisampling counterpart
+	Framebuffer msFBO(W_WIDTH, W_HEIGHT, 4);
+	Framebuffer ppFBO(W_WIDTH, W_HEIGHT);
 
-	// assign multisample texture as the framebuffer's color attachment
-	unsigned int tex;
-	glGenTextures(1, &tex);
-	glBindTexture(GL_TEXTURE_2D_MULTISAMPLE, tex);
-	glTexImage2DMultisample(GL_TEXTURE_2D_MULTISAMPLE, 4, GL_RGB, W_WIDTH, W_HEIGHT, GL_TRUE);
-	glTexParameteri(GL_TEXTURE_2D_MULTISAMPLE, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D_MULTISAMPLE, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glBindTexture(GL_TEXTURE_2D_MULTISAMPLE, 0);
-	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D_MULTISAMPLE, tex, 0);
-
-	// create multisample render buffer object
-	unsigned int msRbo;
-	glGenRenderbuffers(1, &msRbo);
-	glBindRenderbuffer(GL_RENDERBUFFER, msRbo);
-	glRenderbufferStorageMultisample(GL_RENDERBUFFER, 4, GL_DEPTH24_STENCIL8, W_WIDTH, W_HEIGHT);
-	glBindRenderbuffer(GL_RENDERBUFFER, 0);
-	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, msRbo);
-
-	// validate frame buffer
-	if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-		std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete." << std::endl;
-
-	// unbind frame buffer as we finished the operation. This sets back the frame buffer to the default window.
-	glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-
-	// for post processing framebuffer
-	unsigned int ppFramebuffer;
-	glGenFramebuffers(1, &ppFramebuffer);
-	glBindFramebuffer(GL_FRAMEBUFFER, ppFramebuffer);
-
-	// create texture for frame buffer's color attachment
-	unsigned int texColorBuffer;
-	glGenTextures(1, &texColorBuffer);
-	glBindTexture(GL_TEXTURE_2D, texColorBuffer);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, W_WIDTH, W_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glBindTexture(GL_TEXTURE_2D, 0); // unbind
-
-	// attach texture as the color attachment to the bound framebuffer
-	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texColorBuffer, 0);
-
-	// create a render buffer object for frame buffer
-	unsigned int rbo;
-	glGenRenderbuffers(1, &rbo);
-	glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, W_WIDTH, W_HEIGHT);
-	glBindRenderbuffer(GL_RENDERBUFFER, 0);
-
-	// attach the render buffer object as the depth and stencil attachment
-	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
-
-	// validate frame buffer
-	if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-		std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete." << std::endl;
-
-	// unbind frame buffer as we finished the operation. This sets back the frame buffer to the default window.
-	glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-	float quadVertices[] = {
-		// positions(2) : uvs(2)
-		-1.0f, 1.0f, 0.0f, 1.0f,
-		-1.0, -1.0f, 0.0f, 0.0f,
-		 1.0f,-1.0f, 1.0f, 0.0f,
-
-		-1.0f, 1.0f, 0.0f, 1.0f,
-		 1.0f,-1.0f, 1.0f, 0.0f,
-		 1.0f, 1.0f, 1.0f, 1.0f
-	};
-
-	unsigned int quadVAO;
-	glGenVertexArrays(1, &quadVAO);
-
-	unsigned int quadVBO;
-	glGenBuffers(1, &quadVBO);
-	glBindBuffer(GL_ARRAY_BUFFER, quadVBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), quadVertices, GL_STATIC_DRAW);
-	glBindVertexArray(quadVAO);
-
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
-	glEnableVertexAttribArray(1);
+	unsigned int quadVAO = createFrameVAO();
 
 	unsigned int amount = 20000;
 	glm::mat4* modelMatrices;
@@ -214,15 +131,14 @@ int msaa_main()
 
 	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/model_loading/base_material.frag");
 	Shader rockShader("src/shaders/instancing/asteroid_instancing.vert", "src/shaders/model_loading/base_material.frag");
-
-	Shader frame("src/shaders/shader_testing/framebuffer_quad.vert", "src/shaders/post_processing/outlines.frag");
+	Shader frame("src/shaders/post_processing/framebuffer_quad.vert", "src/shaders/post_processing/outlines.frag");
 
 	while (!glfwWindowShouldClose(window))
 	{
 		processInput(window);
 
 		// first pass
-		glBindFramebuffer(GL_FRAMEBUFFER, msFramebuffer);
+		msFBO.bind();
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glEnable(GL_DEPTH_TEST);
@@ -250,8 +166,8 @@ int msaa_main()
 		rock.DrawInstanced(rockShader, amount);
 
 		// second pass
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, msFramebuffer);
-		glBindFramebuffer(GL_DRAW_FRAMEBUFFER, ppFramebuffer);
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, msFBO.FBO);
+		glBindFramebuffer(GL_DRAW_FRAMEBUFFER, ppFBO.FBO);
 		glBlitFramebuffer(0, 0, W_WIDTH, W_HEIGHT, 0, 0, W_WIDTH, W_HEIGHT, GL_COLOR_BUFFER_BIT, GL_NEAREST);
 
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -262,7 +178,7 @@ int msaa_main()
 		frame.use();
 		glBindVertexArray(quadVAO);
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texColorBuffer);
+		glBindTexture(GL_TEXTURE_2D, ppFBO.getTexture());
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 
 		// buffer swapping and event polling

@@ -14,9 +14,12 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 // process input in the renderer
 void processInput(GLFWwindow* window);
-
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
-
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
 unsigned int loadCubemap(std::vector<std::string> faces);
+
+// vertex array object references
+unsigned int createCubeVAO();
+unsigned int createQuadVAO();
+unsigned int createFrameVAO();
