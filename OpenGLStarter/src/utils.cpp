@@ -140,6 +140,18 @@ unsigned int loadCubemap(std::vector<std::string> faces)
 	return textureID;
 }
 
+unsigned int createDefaultTexture()
+{
+	unsigned int whiteTexture;
+	glGenTextures(1, &whiteTexture);
+	glBindTexture(GL_TEXTURE_2D, whiteTexture);
+	unsigned char whitePixel[4] = { 255, 255, 255, 255 };
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 1, 0, GL_RGBA, GL_UNSIGNED_BYTE, whitePixel);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	return whiteTexture;
+}
+
 unsigned int loadTexture(const char* path, bool flipVertically)
 {
 	unsigned int tex;

@@ -20,7 +20,6 @@ int main()
 	// initializing window settings
 	glfwInit();
 
-	// glfwWindowHint(GLFW_SAMPLES, 4); // only use when we aren't using framebuffers for msaa
 	GLFWwindow* window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Blinn Shading", NULL, NULL);
 	if (window == NULL)
 	{
@@ -49,7 +48,7 @@ int main()
 
 	// camera settings
 	Camera camera(
-		glm::vec3(0.0f, 50.0f, 200.0f),
+		glm::vec3(0.0f, 1.0f, 3.0f),
 		glm::vec3(0.0f, 0.0f, -1.0f),
 		glm::vec3(0.0f, 1.0f, 0.0f),
 		45.0f
@@ -63,9 +62,10 @@ int main()
 
 	// floor
 	unsigned int floorVAO = createQuadVAO();
+	// unsigned int floor_diff = loadTexture("src/textures/wood.png", true);
 
-	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/advanced_lighting/blinn_shading.frag");
-	Shader frame("src/shaders/post_processing/framebuffer_quad.vert", "src/shaders/post_processing/outlines.frag");
+	Shader shader("src/shaders/lighting/vertex.vert", "src/shaders/shader_testing/yellow.frag");
+	Shader frame("src/shaders/post_processing/framebuffer_quad.vert", "src/shaders/shader_testing/framebuffer_quad.frag");
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -87,10 +87,12 @@ int main()
 		glm::mat4 model = glm::mat4(1.0f);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(10.0f, 10.0f, 10.0f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 		shader.setMat4("projection", projection);
 		shader.setMat4("view", view);
 		shader.setMat4("model", model);
-
+		glBindVertexArray(floorVAO);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
 
 		// second pass
 		glBindFramebuffer(GL_READ_FRAMEBUFFER, msFBO.FBO);
