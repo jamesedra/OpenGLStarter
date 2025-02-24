@@ -18,6 +18,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
 unsigned int loadCubemap(std::vector<std::string> faces);
+unsigned int loadTexture(const char* path, bool flipVertically);
 
 // vertex array object references
 unsigned int createCubeVAO();
