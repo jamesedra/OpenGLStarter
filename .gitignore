@@ -49,3 +49,4 @@ Desktop.ini
 *.log
 
 /bin/
+/build/
