@@ -27,7 +27,7 @@ Then build the project.
 ```
 Below are some outputs from the built executable files.
 
-### model instancing, and laplacian filter
+### model instancing, anti-aliasing, and laplacian filter
 <img src="/saved/asteroid_belt.PNG" alt="" style="width: 50%"><img src="/saved/outlines.PNG" alt="" style="width: 50%"> 
 
 ### phong shading, multiple light casting
