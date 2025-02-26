@@ -33,6 +33,6 @@ Below are some outputs from the built executable files.
 ### phong shading, multiple light casting
 <img src="/saved/light_casting.PNG" alt="" style="width: 50%"><img src="/saved/spot_light.PNG" alt="" style="width: 50%">  
 
-### model stencil outlining, explosion, and normals visualization
+### stencil outlining, normals visualization, and explosion 
 <img src="/saved/model_loading.PNG" alt="" style="width: 33%"><img src="/saved/normals.PNG" alt="" style="width: 33%"><img src="/saved/model_explosion.PNG" alt="" style="width: 33%">
 
