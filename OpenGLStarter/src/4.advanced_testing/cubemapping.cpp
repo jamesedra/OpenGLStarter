@@ -246,7 +246,7 @@ int main()
 		shader.setInt("skybox", 0); // gets the first texture unit cubemap
 		glBindVertexArray(cubeVAO);
 		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture); // can be disregarded is the cubemap was never unbounded
-		glDrawArrays(GL_POINTS, 0, 36);
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// draw cubemap
 		glFrontFace(GL_CW); // flip face culling since the camera is inside the cubemap

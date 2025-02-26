@@ -70,6 +70,7 @@ set(D3D_COMP "${CMAKE_SOURCE_DIR}/../bin/x64/Debug/D3DCompiler_42.dll")
 set(D3DX9_42 "${CMAKE_SOURCE_DIR}/../bin/x64/Debug/D3DX9_42.dll")
 set(SHADER_DIR "${CMAKE_SOURCE_DIR}/src/shaders")
 set(RESOURCES_DIR "${CMAKE_SOURCE_DIR}/src/resources")
+set(TEXTURES_DIR "${CMAKE_SOURCE_DIR}/src/textures")
 
 math(EXPR LAST_INDEX "${execCount} - 1")
 
@@ -104,5 +105,11 @@ foreach(i RANGE 0 ${LAST_INDEX})
       COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${RESOURCES_DIR}"
         "$<TARGET_FILE_DIR:${exeName}>/src/resources"
+    )
+
+    add_custom_command(TARGET ${exeName} POST_BUILD
+      COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${TEXTURES_DIR}"
+        "$<TARGET_FILE_DIR:${exeName}>/src/textures"
     )
 endforeach()
