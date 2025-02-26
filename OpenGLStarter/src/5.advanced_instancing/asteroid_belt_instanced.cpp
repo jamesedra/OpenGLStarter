@@ -14,7 +14,7 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int asteroid_belt_inst_main()
+int main()
 {
 	// initializing window settings
 	glfwInit();

@@ -14,7 +14,7 @@
 constexpr int W_WIDTH = 800;
 constexpr int W_HEIGHT = 600;
 
-int model_loading_main()
+int main()
 {
 	// initializing window settings
 	glfwInit();
