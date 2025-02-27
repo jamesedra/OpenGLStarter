@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\1.getting_started\1.1.hello_window\hello_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.2.hello_triangle\hello_triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shaders\shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stb\stb_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.3.textures\textured_rect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.4.transformations\transforms_exercise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.5.coordinate_systems\projections_multiple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\1.getting_started\1.6.camera\camera_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\lighting_scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.1.lighting_scene\basic_lighting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.2.materials\materials_scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.2.materials\diffuse_maps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.2.materials\light_casting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\2.lighting_systems\2.2.materials\multiple_lights.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\3.model_loading\model_loading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\depth_stencil_testing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\blending.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\face_culling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\framebuffer_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\cubemapping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\uniform_buffers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\geometry_shading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\geometry_explosion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\4.advanced_testing\normals_visualization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\5.advanced_instancing\instancing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\5.advanced_instancing\instanced_arrays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\5.advanced_instancing\asteroid_belt_non_instanced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\5.advanced_instancing\asteroid_belt_instanced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\6.anti_aliasing\msaa_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\6.anti_aliasing\msaa_test_refactored.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\7.advanced_lighting\blinn_shading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shaders\shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stb\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shaders\gradient\gradient.vert" />
+    <None Include="src\shaders\gradient\gradient.frag" />
+    <None Include="src\shaders\texture_sampling\texturing.vert" />
+    <None Include="src\shaders\texture_sampling\texturing.frag" />
+    <None Include="src\shaders\projections\projections.vert" />
+    <None Include="src\shaders\projections\texturing_only.frag" />
+    <None Include="src\shaders\lighting\vertex.vert" />
+    <None Include="src\shaders\lighting\base.frag" />
+    <None Include="src\shaders\lighting\light_source.frag" />
+    <None Include="src\shaders\lighting\diffuse.frag" />
+    <None Include="src\shaders\material_samples\material.frag" />
+    <None Include="src\shaders\material_samples\diffuse_map.frag" />
+    <None Include="src\shaders\material_samples\diff_spec_sampling.frag" />
+    <None Include="src\shaders\light_casting\light_casting.frag" />
+    <None Include="src\shaders\light_casting\multi_lights.frag" />
+    <None Include="src\resources\objects\backpack\backpack.mtl" />
+    <None Include="src\shaders\model_loading\base_material.frag" />
+    <None Include="src\shaders\shader_testing\depth_testing.frag" />
+    <None Include="src\shaders\shader_testing\stencil_outline.frag" />
+    <None Include="src\shaders\shader_testing\blend_testing.frag" />
+    <None Include="src\shaders\shader_testing\framebuffer_quad.vert" />
+    <None Include="src\shaders\shader_testing\framebuffer_quad.frag" />
+    <None Include="src\shaders\post_processing\outlines.frag" />
+    <None Include="src\shaders\cubemapping\cubemap.vert" />
+    <None Include="src\shaders\cubemapping\cubemap.frag" />
+    <None Include="src\shaders\cubemapping\reflection.frag" />
+    <None Include="src\shaders\cubemapping\reflection.vert" />
+    <None Include="src\shaders\cubemapping\refraction.frag" />
+    <None Include="src\shaders\shader_testing\uniform_buffer.vert" />
+    <None Include="src\shaders\shader_testing\yellow.frag" />
+    <None Include="src\shaders\shader_testing\blue.frag" />
+    <None Include="src\shaders\geometry_shaders\line.geom" />
+    <None Include="src\shaders\geometry_shaders\vertex.vert" />
+    <None Include="src\shaders\geometry_shaders\green.frag" />
+    <None Include="src\shaders\geometry_shaders\house.geom" />
+    <None Include="src\shaders\geometry_shaders\geom_color.frag" />
+    <None Include="src\shaders\geometry_shaders\explode.geom" />
+    <None Include="src\shaders\geometry_shaders\model_vert.vert" />
+    <None Include="src\shaders\geometry_shaders\visual_normal.vert" />
+    <None Include="src\shaders\geometry_shaders\visual_normal.geom" />
+    <None Include="src\shaders\instancing\instancing.vert" />
+    <None Include="src\shaders\instancing\instance_arrays.vert" />
+    <None Include="src\resources\objects\rock\rock\rock.mtl" />
+    <None Include="src\resources\objects\planet\planet.mtl" />
+    <None Include="src\resources\objects\rock\rock.mtl" />
+    <None Include="src\shaders\instancing\asteroid_instancing.vert" />
+    <None Include="src\shaders\post_processing\framebuffer_quad.vert" />
+    <None Include="src\shaders\advanced_lighting\blinn_shading.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\textures\pixelart.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\Installment I.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\face.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\container2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\container2_specular.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\container2_specular_colored.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\backpack\ao.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\backpack\diffuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\backpack\normal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\backpack\roughness.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\backpack\specular.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\apple.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\skybox\back.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\skybox\bottom.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\skybox\front.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\skybox\left.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\skybox\right.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\skybox\top.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\rock\rock\rock.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\planet\mars.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\resources\objects\rock\rock.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\textures\wood.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="src\resources\objects\backpack\backpack.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\resources\objects\backpack\source_attribution.txt" />
+    <Text Include="src\resources\objects\planet\source.txt" />
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+</Project>
